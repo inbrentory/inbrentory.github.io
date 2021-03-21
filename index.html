@@ -10,44 +10,31 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <!--Below is the link to use Googlefont on the website-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">   
-    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Yanone+Kaffeesatz:wght@400;500;600;700&display=swap" rel="stylesheet">    <!--link to CDNjs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!--link to local CSS-->
+    <link href="./style.css" rel="stylesheet">
+    <!--link to local JS-->
+    <script src="./script.js"></script>
     <title>BRENT</title>
 </head>
 <body>
-    <p1 class="header">Brent Bannawit</p>
     <!--Below is the Bootstrap's Navbar code to initiate the tools bar-->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3f82a6;">
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbar" style="background-color: #f7f7f0;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">inbrentory</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!--below is the searching box-->
+          <a class="navbar-brand" href="#">INBRENTORY</a>
+
+          <!--Below is the expanding searching box-->
             <form class="d-flex">
-                <input class="search-box" type="text" name="search" placeholder="">
-                <style> 
-                    input[type=text] {
-                      width: 10em;
-                      box-sizing: border-box;
-                      border: 2px solid white;
-                      border-radius: 10px;
-                      font-size: 16px;
-                      text-align: left;
-                      background-color: #3f82a6;
-                      background-image: url('./searching.png');
-                      background-position: 8em 0.35em; 
-                      background-repeat: no-repeat;
-                      padding: 1em 1em 1em 10em;
-                      -webkit-transition: width 0.6s ease-in-out;
-                      transition: width 0.6s ease-in-out;
-                    }
-                    
-                    input[type=text]:focus {
-                      width: 100%;
-                    }
-                    </style>
+              <div class="content">
+              <div class="search-bar">
+                <input type="text" class="search-bar__input" placeholder="" aria-label="search"/>
+                <button class="search-bar__submit" ><i class="fas fa-search"aria-label="submit search"></i></button>
+              </div>
+            </div>
             </form>
+
+          <!--Below is the tools bar on the upper right-->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -73,27 +60,112 @@
           </div>
         </div>
       </nav>
-      <!--Cards Group-->
-      <div class="card border-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header">Header</div>
-        <div class="card-body text-primary">
-          <h5 class="card-title">Primary card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+  <!--Basic Layout in the body part-->
+  <div class="wrapper">
+    <div class="item1">
+      <article>
+      <h1>learn more <span class="badge bg-secondary">about me!</span></h1>
+      <h>Hello! Welcome to Brent's site</h>
+      <p>I am a coding student, learning about full-stack developing tasks!</p>
+      </article>
+    </div>
+    <div class="item2">2
+    <!--Below is the slide show-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="padding-left: 250px;">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner" style="position: relative; width: 1200px; height: 400px;">
+        <div class="carousel-item active" style="height: 300px; width: 300px;">
+          <img src="./pacman-svgrepo-com (1).svg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block" style="padding-left: 400px; width: 1000px; margin-top: 300px;">
+            <h3>PACMAN EXERCISE</h3>
+            <p>Student are learning how to make the object bounces within the boudary</p>
+          </div>
+        </div>
+        <div class="carousel-item" style="height: 300px; width: 300px;">
+          <img src="./eye-svgrepo-com (1).svg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block" style="padding-left: 400px; width: 1000px; margin-top: 300px;">
+            <h3>EYE MOVEMENT EXERCISE</h3>
+            <p>Now we are capable of making cursor interact with an opject!</p>
+          </div>
+        </div>
+        <div class="carousel-item" style="height: 300px; width: 300px;">
+          <img src="./bus-svgrepo-com (1).svg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block" style="padding-left: 400px; width: 1000px; margin-top: 300px;">
+            <h3>BUS TRACKING EXERCISE</h3>
+            <p>Not only working within local network. open-API are now used to track the bus route live!</p>
+          </div>
         </div>
       </div>
-      <div class="card border-secondary mb-3" style="max-width: 18rem;">
-        <div class="card-header">Header</div>
-        <div class="card-body text-secondary">
-          <h5 class="card-title">Secondary card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card border-success mb-3" style="max-width: 18rem;">
-        <div class="card-header">Header</div>
-        <div class="card-body text-success">
-          <h5 class="card-title">Success card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+   <!--Below is the comment box src:https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_textarea_form-->
+  <div class="item3">
+  </div>
+  <!--Below is the youtube link-->
+  <div class="item4">
+    <div class="item4" style="padding-top: 20px; padding-left: 150px; padding-right: 20px; padding-bottom: 20px;">
+      <iframe width="1400px" height="700px"
+      src="https://www.youtube.com/embed/3kIJaN9MLJ4">
+    </iframe>
+    </div>
+  </div>
+  <div></div>
+  <!--Copyright disclaimer-->
+  <div class="item6" style="color:ivory">
+    <h1>what do you think?</h1>
+  </div>
+    <div class="item7" style="color:ivory">
+      <article>
+        <h1>copy right!</h1>
+        <p>this page was created by Bannawit Kh.</p>
+        <p>copy right under MIT license.</p>
+        </article>
+    </div>
+  </div>
+
+
+
+  <!--Below is the pop-up part from Bootstrap-->
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="..." class="rounded me-2" alt="...">
+      <strong class="me-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById("toastbtn").onclick = function() {
+      var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+      var toastList = toastElList.map(function(toastEl) {
+      // Creates an array of toasts (it only initializes them)
+        return new bootstrap.Toast(toastEl) // No need for options; use the default options
+      });
+     toastList.forEach(toast => toast.show()); // This show them
+ 
+      console.log(toastList); // Testing to see if it works
+    };
+
+  </script>
 </body>
+<footer class="footer">
+</footer>
 </html>

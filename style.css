@@ -1,9 +1,17 @@
+/*this part is the general design on page*/
 body {
     padding-top: 10px;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Barlow Semi Condensed', sans-serif;
     font-size: 1.25em;
-    color: white;
-    background-color: #3f82a6;
+    color: black;
+    background-color: #f7f7f0;
+}
+/*this part is the navbar from Bootstrap*/
+.d-flex {
+    padding-top: -3.5em;
+    padding-bottom: -3em;
+    padding-right: 10em;
+    position: relative
 }
 
 .header {
@@ -14,10 +22,131 @@ body {
     font-size: 1.5em;
     font-weight: bold;
     color: #ffffff;
-    
+}
+#navbarSupportedContent {
+    position: relative;
+    padding-left: 25em;
+    font-size: 1em;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+} 
+
+/*this part is the searchbox modified from src:Kevin Powell, https://codepen.io/kevinpowell/pen/jONomrd*/
+:root {
+    --clr-primary: transparent;
+    --clr-body:rgb(26, 25, 25);
+    --clr-bg: #ddd;
+}
+.content { /*the content is the canvas is needed to provide the area which we like to expand*/
+    background: transparent;
+    width: 25em;
+    padding: 1em;
+    position: relative;
+    transition: width 300ms ease-in-out;
+  }
+
+.search-bar {
+    --size: 40px;
+    border: 2px solid #ff6d29;
+    display: flex;
+    border-radius: 100vh;
+    height: var(--size);
+    width: var(--size);
+    padding: 3px;
+    position: relative;
+    overflow: hiden;
+}
+    /*introducing SASS (how?)*/
+.search-bar__input {
+    flex-grow: 1.5;
+    font-size: 1.5rem;
+    padding: 0 0.5em;
+    border: 0;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0.5;
+    left: 0;
+    line-height: calc(var(--size) - 3px);
+    opacity: 0.5;
+    outline: 0;
+
 }
 
-.d-flex {
-    padding-top: -5em;
-    padding-right: 40em;
+.search-bar__submit {
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    border-radius: 50%;
+    background: transparent;
+    width: calc(var(--size) - 10px);
+    height: calc(var(--size) - 10px);
+    margin-left: auto;
+    transition: background 300 ms ease-in-out;
+    color: var(--clr-body);
+}
+
+.search-bar:focus-within {
+    box-shadow: 0 0 5px var(--clr-primary);
+    width: 100%;}
+    
+    .search__input {
+      opacity: 1;
+      z-index: initial;
+      cursor: initial;
+      width: calc(100% - var(--size));
+    }
+    
+    .search-bar__submit {
+      background: var(--clr-primary);
+      color: black;
+      box-shadow: 0 0 10px rgba(0,0,0,.15);
+      transition: transform 500ms ease-out;
+      }
+
+/*this part is the grid layout for the site's body*/
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2fr);
+    grid-template-rows: repeat(3fr);
+    gap: 20px;
+}
+.item1 {
+    grid-column: 1/4;
+    height: 400px;
+    padding-top: 20px;
+    padding-left: 50em;
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+    flex-direction: column;
+    background-color:#f7f7f0 ;
+}
+.item2 {
+    background-color:#9e9e9e ;
+    grid-column: 1/4;
+}
+.item3 {
+}
+.item4 {
+    background-color:#f7f7f0  ;
+    grid-column: 2/3;
+}
+.item5 {
+    background-color:#f7f7f0  ;
+    grid-column: 3/4;
+}
+.item6 {
+    background-color:#9e9e9e  ;
+    grid-column: 1/3;
+}
+.item7 {
+    background-color:#9e9e9e  ;
+    grid-column: 3/4;
+}
+
+.footer {
+    background-color:#9e9e9e  ;
 }
