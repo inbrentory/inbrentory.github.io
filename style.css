@@ -1,0 +1,23 @@
+body {
+    padding-top: 10px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.25em;
+    color: white;
+    background-color: #3f82a6;
+}
+
+.header {
+    padding-left: 10px;
+    font-weight: bold;
+}
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+    
+}
+
+.d-flex {
+    padding-top: -5em;
+    padding-right: 40em;
+}

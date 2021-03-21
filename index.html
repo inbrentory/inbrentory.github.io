@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Below is the link to access Bootstrap's CSS styles-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!--Below is the link to access Bootstrap's JS codes-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!--Below is the link to use Googlefont on the website-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="./style.css">
+    <title>BRENT</title>
+</head>
+<body>
+    <p1 class="header">Brent Bannawit</p>
+    <!--Below is the Bootstrap's Navbar code to initiate the tools bar-->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #3f82a6;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">inbrentory</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!--below is the searching box-->
+            <form class="d-flex">
+                <input class="search-box" type="text" name="search" placeholder="">
+                <style> 
+                    input[type=text] {
+                      width: 10em;
+                      box-sizing: border-box;
+                      border: 2px solid white;
+                      border-radius: 10px;
+                      font-size: 16px;
+                      text-align: left;
+                      background-color: #3f82a6;
+                      background-image: url('./searching.png');
+                      background-position: 8em 0.35em; 
+                      background-repeat: no-repeat;
+                      padding: 1em 1em 1em 10em;
+                      -webkit-transition: width 0.6s ease-in-out;
+                      transition: width 0.6s ease-in-out;
+                    }
+                    
+                    input[type=text]:focus {
+                      width: 100%;
+                    }
+                    </style>
+            </form>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home Page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">My Github</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Contact Me!
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">about me</a></li>
+                  <li><a class="dropdown-item" href="#">about you</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">projects</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--Cards Group-->
+      <div class="card border-primary mb-3" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body text-primary">
+          <h5 class="card-title">Primary card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card border-secondary mb-3" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body text-secondary">
+          <h5 class="card-title">Secondary card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body text-success">
+          <h5 class="card-title">Success card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+</body>
+</html>
