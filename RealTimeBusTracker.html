@@ -1,0 +1,86 @@
+  
+<!DOCTYPE html>
+    <!--Below is the link to access CDNjs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="./style.css" rel="stylesheet">
+    <!--Below is the link to access Bootstrap's CSS styles-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!--Below is the link to access Bootstrap's JS codes-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!--Below is the link to use Googlefont on the website-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Yanone+Kaffeesatz:wght@400;500;600;700&display=swap" rel="stylesheet">    <!--link to CDNjs-->
+
+
+<html>
+    <meta charset="utf-8"/>
+  <head>
+        <title>BUS TRACKING</title>
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />  
+  </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light" id="navbar" style="background-color: #f7f7f0;">
+            <div><a<button class="btn" href="./index.html"><i class="fa fa-home"></a></i></button></div>
+        </nav>
+            <button id ="button" style="font-size: 2em; margin-left: 250px;" onclick="move()">Track The Bus!</button>
+         </div>
+         <div id="map" style="height: 800px; width: 1400px; margin-top: 60px; margin-left: 200px;"></div>
+         <script src="mapanimation.js"></script>
+    </body>
+    
+
+</html>
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 100px; bottom: 0; width: 100%; height: 600px; }
+
+.map-overlay {
+position: absolute;
+left: 10px;
+padding: 20px;
+}
+
+#title { font-size: 35px; font-style:normal ; color: white; position: absolute; left: 532px; background-color: #659DBD ;}
+#button {position: absolute; top: 70px; left: 565px}
+</style>
+<script>
+      
+mapboxgl.accessToken = 'pk.eyJ1IjoiYnJlbnRiYW5uYXdpdCIsImEiOiJja20wcWtoOG4xb2YzMndwOG14bTA2eXQxIn0.G4w4tHglL46PiwCggB2CsQ';
+
+var map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/brentbannawit/ckm4y013s2g4s17lhh703y3jq',
+  center: [-71.104081, 42.365554],
+  zoom: 14
+});
+
+var marker = new mapboxgl.Marker()
+.setLngLat([-71.092761, 42.357575])
+.addTo(map);
+
+const busStops = [
+[-71.093729, 42.359244], 
+[-71.094915, 42.360175],
+[-71.095800, 42.360698],
+[-71.099558, 42.362953],
+[-71.103476, 42.365248],
+[-71.106067, 42.366806],
+[-71.108717, 42.368355],
+[-71.110799, 42.369192],
+[-71.113095, 42.370218],
+[-71.115476, 42.372085],
+[-71.117585, 42.373016],
+[-71.118625, 42.374863]
+];
+
+let counter = 0;
+function move(){
+setTimeout(()=>{
+if (counter >= busStops.length) return;
+marker.setLngLat(busStops[counter]);
+counter++;
+move();
+},1000); 
+}
+</script>
