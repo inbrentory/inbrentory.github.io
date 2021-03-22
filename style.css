@@ -1,4 +1,7 @@
 /*this part is the general design on page*/
+p {
+    line-height: 11px;
+}
 body {
     padding-top: 10px;
     font-family: 'Barlow Semi Condensed', sans-serif;
@@ -47,7 +50,7 @@ body {
 
 .search-bar {
     --size: 40px;
-    border: 2px solid #ff6d29;
+    border: 2px solid #fdda10;
     display: flex;
     border-radius: 100vh;
     height: var(--size);
@@ -113,6 +116,28 @@ body {
     grid-template-rows: repeat(3fr);
     gap: 3px;
 }
+.exercise-title {
+    color: #ffe600;
+    font-weight: bolder;
+    font-size: 100px;
+}
+.icon-exercise {
+    padding-left: 70px;
+}
+.carousel.fade .item:first-child {
+    top: auto;
+    position: relative;
+}
+.welcome-tag {
+    font-size: 90px;
+}
+.name-tag {
+    color: black
+}
+.icon-arrow{
+    height: 50px;
+    width: 50px;
+}
 .item1 {
     grid-column: 1/4;
     height: 400px;
@@ -147,7 +172,9 @@ body {
     background-color:#9e9e9e  ;
     grid-column: 3/4;
 }
-
+.icon-exercise {
+    padding-left: 150px;
+}
 .footer {
     background-color:#f7f7f0   ;
 }
