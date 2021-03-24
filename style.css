@@ -173,6 +173,10 @@ body {
     overflow:hidden;
     margin-left: -10px;
 }
+#image-self {
+    height: 100%;
+    min-width: 100%;
+}
 .sawasdee {
     font-family: 'Chonburi', cursive;
     font-size: 30px;
