@@ -164,6 +164,9 @@ body {
     cursor: pointer;
     box-shadow:#1b1b1b ;
 }
+.bio {
+    margin-top: -40px;
+}
 
 .image-cropper {
     width: 129px;
